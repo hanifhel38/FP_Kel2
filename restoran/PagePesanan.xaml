@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="restoran.PagePesanan"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:restoran"
+             mc:Ignorable="d"         
+             d:DesignHeight="700" d:DesignWidth="972" Width="972">
+
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="790" Stroke="WhiteSmoke" Fill="White" VerticalAlignment="Center" Width="974" RenderTransformOrigin="-3.655,-0.155" Margin="1,0,0,0"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="26,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontWeight="SemiBold" FontSize="30" Background="Transparent" Foreground="#FF363636"><Run Language="en-id" Text="Buat Pesanan"/><LineBreak/><Run Language="en-id"/></TextBlock>
+        <TextBlock Text="Nama Pelanggan" HorizontalAlignment="Left" Margin="26,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Semibold" Foreground="#FF363636"/>
+        <TextBox 
+            x:Name="inputNamaPelanggan" 
+            HorizontalAlignment="Left"
+            Padding="4,5,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="338"
+            Height="35" 
+            Background="#EFEFEF"
+            Margin="26,129,0,0"             
+            Foreground="#FF363636"
+            FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="421,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Semibold" Foreground="#FF363636"><Run Language="en-id" Text="No Telepon"/><LineBreak/><Run Language="en-id"/><LineBreak/><Run/></TextBlock>
+        <TextBox 
+            x:Name="inputNoTelepon" 
+            HorizontalAlignment="Left"
+            Padding="4,5,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="338"
+            Height="35" 
+            Background="#EFEFEF"
+            Margin="421,129,0,0"             
+            Foreground="#FF363636"
+            FontSize="16" RenderTransformOrigin="0.49,0.122"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Semibold" Foreground="#FF363636" Text="Nama Pesanan"/>
+        <ComboBox
+             x:Name="inputMakanan" 
+            HorizontalAlignment="Left"
+            Padding="4,5,0,0"
+            VerticalAlignment="Top"
+            Width="338"
+            Height="35" 
+            Background="#EFEFEF"          
+            Foreground="#FF363636"
+            FontSize="16"
+            RenderTransformOrigin="0.49,0.122"
+            Margin="30,233,0,0" SelectionChanged="inputMakanan_SelectionChanged"
+            
+            />
+        <TextBlock HorizontalAlignment="Left" Margin="421,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" FontWeight="Semibold" Foreground="#FF363636"><Run Language="en-id" Text="Harga"/><LineBreak/><Run Language="en-id"/></TextBlock>
+        <TextBox 
+            x:Name="inputHarga" 
+            HorizontalAlignment="Left"
+            Padding="4,5,0,0"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="338"
+            Height="35" 
+            Background="#EFEFEF"
+            Margin="421,233,0,0"             
+            Foreground="#FF363636"
+            FontSize="16" RenderTransformOrigin="0.49,0.122" IsEnabled="False"/>
+        <TextBlock HorizontalAlignment="Left" Margin="216,512,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Semibold" Foreground="#FF363636"><Run Language="en-id" Text="Metode"/><LineBreak/><Run Language="en-id"/></TextBlock>
+        <RadioButton x:Name="radioButton" Content="Cash" HorizontalAlignment="Left"  Margin="214,549,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
+        <RadioButton x:Name="radioButton_Copy" Content="Debit" HorizontalAlignment="Left"  Margin="214,577,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
+        <Border BorderThickness="0,0,0,0" Grid.Row="0" CornerRadius="30,30,0,0" Margin="199,420,245,0" Background="#FFF3F3F3" RenderTransformOrigin="0.512,2.225">
+            <Grid Margin="2,0,-2,0">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="27" FontWeight="SemiBold" Foreground="#FF363636" RenderTransformOrigin="3.921,4.177" Margin="65,36,0,0"><Run Language="en-id" Text="Total"/><LineBreak/><Run Language="en-id"/></TextBlock>
+                <TextBlock x:Name="total_bayar" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" FontWeight="Normal" Foreground="#FF363636" RenderTransformOrigin="3.921,4.177" Margin="0,36,70,0"><Run Language="en-id" Text="Rp. 00"/></TextBlock>
+            </Grid>
+        </Border>
+        <Button x:Name="btnTambah" Content="Tambah" HorizontalAlignment="Left" Margin="515,291,0,0" VerticalAlignment="Top" Width="244" Height="32" Background="#F5D840" FontWeight="Bold" FontSize="14" Click="btnTambah_Click"/>
+        <Button x:Name="btnBayar" Content="Bayar" HorizontalAlignment="Left" Margin="463,609,0,0" VerticalAlignment="Top" Width="244" Height="32" Background="#F5D840" FontWeight="Bold" FontSize="14" Click="btnBayar_Click"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="214,609,0,0" VerticalAlignment="Top" Width="244" Height="32" Background="#FFA8A7A2" FontWeight="Bold" FontSize="14" Foreground="White" Click="btnCancel_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="241,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" FontWeight="Semibold" Foreground="#FF363636"><Run Language="en-id" Text="Metode"/><LineBreak/><Run Language="en-id"/></TextBlock>
+        <RadioButton x:Name="metodeCash" Content="Cash" HorizontalAlignment="Left"  Margin="243,537,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
+        <RadioButton x:Name="metodeDebit" Content="Debit" HorizontalAlignment="Left"  Margin="336,537,0,0" VerticalAlignment="Top" FontSize="18" FontWeight="SemiBold"/>
+    </Grid>
+</UserControl>

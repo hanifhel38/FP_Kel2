@@ -1,0 +1,53 @@
+﻿<Window x:Class="restoran.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:restoran"
+        mc:Ignorable="d"
+        Title="Restauran" Height="500" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid Width="900" Height="500">
+        <Label 
+            x:Name="label"
+            Content="Login"
+            HorizontalAlignment="Center" 
+            Margin="0,70,0,0"
+            VerticalAlignment="Top" 
+            FontSize="40"
+            FontWeight="Bold"/>
+        <TextBox 
+            GotFocus="username_GotFocus"
+            LostFocus="username_LostFocus"
+            x:Name="username" 
+            HorizontalAlignment="Center"
+            Padding="4,5,0,0"
+            Text="Username"
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top"
+            Width="245"
+            Height="32" 
+            Background="#EFEFEF"
+            Margin="0,178,0,0"             
+            Foreground="#FFA3A2A5"
+
+            FontSize="14"/>
+
+        <TextBox 
+            LostFocus="password_LostFocus"
+            GotFocus="password_GotFocus"
+            x:Name="password"
+            HorizontalAlignment="Center"
+            Padding="4,5,0,0"
+            Text="Password"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top" 
+            Width="244" Height="32" 
+            Background="#EFEFEF" 
+            Margin="0,217,0,0"
+            FontSize="14"
+            FontWeight="Normal"
+            Foreground="#FFA3A2A5"/>
+        <Button x:Name="login" Content="Login" HorizontalAlignment="Center" Margin="0,283,0,0" VerticalAlignment="Top" Width="244" Height="32" Background="#F5D840" FontWeight="Bold" FontSize="14" Click="login_Click"/>
+
+    </Grid>
+</Window>
